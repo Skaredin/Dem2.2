@@ -47,6 +47,17 @@ namespace Dem2._2
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.clientBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.clientDataGridView = new System.Windows.Forms.DataGridView();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Nazad = new System.Windows.Forms.Label();
+            this.clientTableAdapter = new Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.ClientTableAdapter();
+            this.tableAdapterManager = new Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.TableAdapterManager();
+            this.genderTableAdapter = new Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.GenderTableAdapter();
+            this.redaktirovanieIDobavlenieKlienta = new System.Windows.Forms.Button();
+            this.IToA = new System.Windows.Forms.CheckBox();
+            this.AToI = new System.Windows.Forms.CheckBox();
+            this.label = new System.Windows.Forms.Label();
+            this.genderCode = new System.Windows.Forms.ComboBox();
+            this.filter = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,19 +67,8 @@ namespace Dem2._2
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nazad = new System.Windows.Forms.Label();
-            this.clientTableAdapter = new Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.ClientTableAdapter();
-            this.tableAdapterManager = new Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.TableAdapterManager();
-            this.genderTableAdapter = new Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.GenderTableAdapter();
-            this.redaktirovanieIDobavlenieKlienta = new System.Windows.Forms.Button();
-            this.IToA = new System.Windows.Forms.CheckBox();
-            this.Sortirovat = new System.Windows.Forms.Button();
-            this.AToI = new System.Windows.Forms.CheckBox();
-            this.label = new System.Windows.Forms.Label();
-            this.genderCode = new System.Windows.Forms.ComboBox();
-            this.filter = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingNavigator)).BeginInit();
             this.clientBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
@@ -103,7 +103,7 @@ namespace Dem2._2
             this.clientBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.clientBindingNavigator.Name = "clientBindingNavigator";
             this.clientBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clientBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.clientBindingNavigator.Size = new System.Drawing.Size(801, 25);
             this.clientBindingNavigator.TabIndex = 0;
             this.clientBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -229,12 +229,121 @@ namespace Dem2._2
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
+            this.dataGridViewTextBoxColumn10,
+            this.Column1});
             this.clientDataGridView.DataSource = this.clientBindingSource;
             this.clientDataGridView.Location = new System.Drawing.Point(12, 123);
             this.clientDataGridView.Name = "clientDataGridView";
-            this.clientDataGridView.Size = new System.Drawing.Size(776, 315);
+            this.clientDataGridView.Size = new System.Drawing.Size(777, 315);
             this.clientDataGridView.TabIndex = 1;
+            // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.___Dem2Skarredin2DataSet;
+            // 
+            // Nazad
+            // 
+            this.Nazad.AutoSize = true;
+            this.Nazad.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Nazad.Location = new System.Drawing.Point(22, 39);
+            this.Nazad.Name = "Nazad";
+            this.Nazad.Size = new System.Drawing.Size(25, 13);
+            this.Nazad.TabIndex = 2;
+            this.Nazad.Text = "<----";
+            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
+            // 
+            // clientTableAdapter
+            // 
+            this.clientTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AttachedProductTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientServiceTableAdapter = null;
+            this.tableAdapterManager.ClientTableAdapter = this.clientTableAdapter;
+            this.tableAdapterManager.DocumentByServiceTableAdapter = null;
+            this.tableAdapterManager.GenderTableAdapter = this.genderTableAdapter;
+            this.tableAdapterManager.ManufacturerTableAdapter = null;
+            this.tableAdapterManager.ProductPhotoTableAdapter = null;
+            this.tableAdapterManager.ProductSaleTableAdapter = null;
+            this.tableAdapterManager.ProductTableAdapter = null;
+            this.tableAdapterManager.ServicePhotoTableAdapter = null;
+            this.tableAdapterManager.ServiceTableAdapter = null;
+            this.tableAdapterManager.TagOfClientTableAdapter = null;
+            this.tableAdapterManager.TagTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // genderTableAdapter
+            // 
+            this.genderTableAdapter.ClearBeforeFill = true;
+            // 
+            // redaktirovanieIDobavlenieKlienta
+            // 
+            this.redaktirovanieIDobavlenieKlienta.Location = new System.Drawing.Point(562, 40);
+            this.redaktirovanieIDobavlenieKlienta.Name = "redaktirovanieIDobavlenieKlienta";
+            this.redaktirovanieIDobavlenieKlienta.Size = new System.Drawing.Size(226, 23);
+            this.redaktirovanieIDobavlenieKlienta.TabIndex = 3;
+            this.redaktirovanieIDobavlenieKlienta.Text = "Добавление и редактирование";
+            this.redaktirovanieIDobavlenieKlienta.UseVisualStyleBackColor = true;
+            this.redaktirovanieIDobavlenieKlienta.Click += new System.EventHandler(this.redaktirovanieIDobavlenieKlienta_Click);
+            // 
+            // IToA
+            // 
+            this.IToA.AutoSize = true;
+            this.IToA.Location = new System.Drawing.Point(299, 79);
+            this.IToA.Name = "IToA";
+            this.IToA.Size = new System.Drawing.Size(136, 17);
+            this.IToA.TabIndex = 21;
+            this.IToA.Text = "Сортировка от Я до А";
+            this.IToA.UseVisualStyleBackColor = true;
+            this.IToA.CheckedChanged += new System.EventHandler(this.IToA_CheckedChanged);
+            // 
+            // AToI
+            // 
+            this.AToI.AutoSize = true;
+            this.AToI.Location = new System.Drawing.Point(157, 79);
+            this.AToI.Name = "AToI";
+            this.AToI.Size = new System.Drawing.Size(136, 17);
+            this.AToI.TabIndex = 19;
+            this.AToI.Text = "Сортировка от А до Я";
+            this.AToI.UseVisualStyleBackColor = true;
+            this.AToI.CheckedChanged += new System.EventHandler(this.AToI_CheckedChanged);
+            // 
+            // label
+            // 
+            this.label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(455, 80);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(67, 13);
+            this.label.TabIndex = 18;
+            this.label.Text = "Сортировка";
+            // 
+            // genderCode
+            // 
+            this.genderCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.genderCode.FormattingEnabled = true;
+            this.genderCode.Items.AddRange(new object[] {
+            "Все",
+            "Мужской",
+            "Женский"});
+            this.genderCode.Location = new System.Drawing.Point(667, 77);
+            this.genderCode.Name = "genderCode";
+            this.genderCode.Size = new System.Drawing.Size(121, 21);
+            this.genderCode.TabIndex = 17;
+            this.genderCode.Text = "Всё";
+            this.genderCode.SelectedIndexChanged += new System.EventHandler(this.genderCode_SelectedIndexChanged);
+            // 
+            // filter
+            // 
+            this.filter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.filter.Location = new System.Drawing.Point(528, 77);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(114, 20);
+            this.filter.TabIndex = 16;
+            this.filter.TextChanged += new System.EventHandler(this.filter_TextChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -296,137 +405,23 @@ namespace Dem2._2
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn9.ValueMember = "Code";
             // 
-            // genderBindingSource
-            // 
-            this.genderBindingSource.DataMember = "Gender";
-            this.genderBindingSource.DataSource = this.___Dem2Skarredin2DataSet;
-            // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "PhotoPath";
             this.dataGridViewTextBoxColumn10.HeaderText = "Путь к фото";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // Nazad
+            // Column1
             // 
-            this.Nazad.AutoSize = true;
-            this.Nazad.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Nazad.Location = new System.Drawing.Point(22, 39);
-            this.Nazad.Name = "Nazad";
-            this.Nazad.Size = new System.Drawing.Size(25, 13);
-            this.Nazad.TabIndex = 2;
-            this.Nazad.Text = "<----";
-            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
-            // 
-            // clientTableAdapter
-            // 
-            this.clientTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AttachedProductTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientServiceTableAdapter = null;
-            this.tableAdapterManager.ClientTableAdapter = this.clientTableAdapter;
-            this.tableAdapterManager.DocumentByServiceTableAdapter = null;
-            this.tableAdapterManager.GenderTableAdapter = this.genderTableAdapter;
-            this.tableAdapterManager.ManufacturerTableAdapter = null;
-            this.tableAdapterManager.ProductPhotoTableAdapter = null;
-            this.tableAdapterManager.ProductSaleTableAdapter = null;
-            this.tableAdapterManager.ProductTableAdapter = null;
-            this.tableAdapterManager.ServicePhotoTableAdapter = null;
-            this.tableAdapterManager.ServiceTableAdapter = null;
-            this.tableAdapterManager.TagOfClientTableAdapter = null;
-            this.tableAdapterManager.TagTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // genderTableAdapter
-            // 
-            this.genderTableAdapter.ClearBeforeFill = true;
-            // 
-            // redaktirovanieIDobavlenieKlienta
-            // 
-            this.redaktirovanieIDobavlenieKlienta.Location = new System.Drawing.Point(562, 40);
-            this.redaktirovanieIDobavlenieKlienta.Name = "redaktirovanieIDobavlenieKlienta";
-            this.redaktirovanieIDobavlenieKlienta.Size = new System.Drawing.Size(226, 23);
-            this.redaktirovanieIDobavlenieKlienta.TabIndex = 3;
-            this.redaktirovanieIDobavlenieKlienta.Text = "Добавление и редактирование";
-            this.redaktirovanieIDobavlenieKlienta.UseVisualStyleBackColor = true;
-            this.redaktirovanieIDobavlenieKlienta.Click += new System.EventHandler(this.redaktirovanieIDobavlenieKlienta_Click);
-            // 
-            // IToA
-            // 
-            this.IToA.AutoSize = true;
-            this.IToA.Location = new System.Drawing.Point(12, 100);
-            this.IToA.Name = "IToA";
-            this.IToA.Size = new System.Drawing.Size(136, 17);
-            this.IToA.TabIndex = 21;
-            this.IToA.Text = "Сортировка от Я до А";
-            this.IToA.UseVisualStyleBackColor = true;
-            this.IToA.CheckedChanged += new System.EventHandler(this.IToA_CheckedChanged);
-            // 
-            // Sortirovat
-            // 
-            this.Sortirovat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Sortirovat.Location = new System.Drawing.Point(168, 77);
-            this.Sortirovat.Name = "Sortirovat";
-            this.Sortirovat.Size = new System.Drawing.Size(81, 40);
-            this.Sortirovat.TabIndex = 20;
-            this.Sortirovat.Text = "Сортировать";
-            this.Sortirovat.UseVisualStyleBackColor = true;
-            // 
-            // AToI
-            // 
-            this.AToI.AutoSize = true;
-            this.AToI.Location = new System.Drawing.Point(12, 77);
-            this.AToI.Name = "AToI";
-            this.AToI.Size = new System.Drawing.Size(136, 17);
-            this.AToI.TabIndex = 19;
-            this.AToI.Text = "Сортировка от А до Я";
-            this.AToI.UseVisualStyleBackColor = true;
-            this.AToI.CheckedChanged += new System.EventHandler(this.AToI_CheckedChanged);
-            // 
-            // label
-            // 
-            this.label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(452, 85);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(67, 13);
-            this.label.TabIndex = 18;
-            this.label.Text = "Сортировка";
-            // 
-            // genderCode
-            // 
-            this.genderCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.genderCode.FormattingEnabled = true;
-            this.genderCode.Items.AddRange(new object[] {
-            "Все",
-            "Мужской",
-            "Женский"});
-            this.genderCode.Location = new System.Drawing.Point(666, 77);
-            this.genderCode.Name = "genderCode";
-            this.genderCode.Size = new System.Drawing.Size(121, 21);
-            this.genderCode.TabIndex = 17;
-            this.genderCode.Text = "Всё";
-            this.genderCode.SelectedIndexChanged += new System.EventHandler(this.genderCode_SelectedIndexChanged);
-            // 
-            // filter
-            // 
-            this.filter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.filter.Location = new System.Drawing.Point(525, 78);
-            this.filter.Name = "filter";
-            this.filter.Size = new System.Drawing.Size(114, 20);
-            this.filter.TabIndex = 16;
-            this.filter.TextChanged += new System.EventHandler(this.filter_TextChanged);
+            this.Column1.HeaderText = "Картинка";
+            this.Column1.Name = "Column1";
             // 
             // Klient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 450);
             this.Controls.Add(this.IToA);
-            this.Controls.Add(this.Sortirovat);
             this.Controls.Add(this.AToI);
             this.Controls.Add(this.label);
             this.Controls.Add(this.genderCode);
@@ -472,6 +467,13 @@ namespace Dem2._2
         private System.Windows.Forms.DataGridView clientDataGridView;
         private __Dem2Skarredin2DataSetTableAdapters.GenderTableAdapter genderTableAdapter;
         private System.Windows.Forms.BindingSource genderBindingSource;
+        private System.Windows.Forms.Label Nazad;
+        private System.Windows.Forms.Button redaktirovanieIDobavlenieKlienta;
+        private System.Windows.Forms.CheckBox IToA;
+        private System.Windows.Forms.CheckBox AToI;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.ComboBox genderCode;
+        private System.Windows.Forms.TextBox filter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -482,13 +484,6 @@ namespace Dem2._2
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.Label Nazad;
-        private System.Windows.Forms.Button redaktirovanieIDobavlenieKlienta;
-        private System.Windows.Forms.CheckBox IToA;
-        private System.Windows.Forms.Button Sortirovat;
-        private System.Windows.Forms.CheckBox AToI;
-        private System.Windows.Forms.Label label;
-        private System.Windows.Forms.ComboBox genderCode;
-        private System.Windows.Forms.TextBox filter;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

@@ -49,6 +49,11 @@ namespace Dem2._2
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.serviceBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.serviceDataGridView = new System.Windows.Forms.DataGridView();
+            this.Nazad = new System.Windows.Forms.Label();
+            this.redaktirovanieIDobavlenieServis = new System.Windows.Forms.Button();
+            this.Poisk = new System.Windows.Forms.TextBox();
+            this.Kolvo = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,11 +61,7 @@ namespace Dem2._2
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nazad = new System.Windows.Forms.Label();
-            this.redaktirovanieIDobavlenieServis = new System.Windows.Forms.Button();
-            this.Poisk = new System.Windows.Forms.TextBox();
-            this.Kolvo = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.___Dem2Skarredin2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingNavigator)).BeginInit();
@@ -236,56 +237,14 @@ namespace Dem2._2
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.dataGridViewTextBoxColumn7,
+            this.Column1});
             this.serviceDataGridView.DataSource = this.serviceBindingSource;
             this.serviceDataGridView.Location = new System.Drawing.Point(12, 77);
             this.serviceDataGridView.Name = "serviceDataGridView";
             this.serviceDataGridView.Size = new System.Drawing.Size(776, 361);
             this.serviceDataGridView.TabIndex = 1;
             this.serviceDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.serviceDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Номер";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Title";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Описание";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cost";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Цена";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "DurationInSeconds";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Время в секундах";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Description";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Описание";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Discount";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Скидка в %";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "MainImagePath";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Путь к фото";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // Nazad
             // 
@@ -335,6 +294,56 @@ namespace Dem2._2
             this.label.TabIndex = 19;
             this.label.Text = "Поиск";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Номер";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Title";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Описание";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cost";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Цена";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "DurationInSeconds";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Время в секундах";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Описание";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Discount";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Скидка в %";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "MainImagePath";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Путь к фото";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Фотография";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // Servis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -381,6 +390,11 @@ namespace Dem2._2
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton serviceBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView serviceDataGridView;
+        private System.Windows.Forms.Label Nazad;
+        private System.Windows.Forms.Button redaktirovanieIDobavlenieServis;
+        private System.Windows.Forms.TextBox Poisk;
+        private System.Windows.Forms.Label Kolvo;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -388,10 +402,6 @@ namespace Dem2._2
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.Label Nazad;
-        private System.Windows.Forms.Button redaktirovanieIDobavlenieServis;
-        private System.Windows.Forms.TextBox Poisk;
-        private System.Windows.Forms.Label Kolvo;
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

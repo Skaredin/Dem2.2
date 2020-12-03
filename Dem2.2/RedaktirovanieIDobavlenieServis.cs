@@ -139,8 +139,8 @@ namespace Dem2._2
         private void Nazad_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RedaktirovanieIDobavlenieServis redaktirovanieIDobavlenieServis = new RedaktirovanieIDobavlenieServis();
-            redaktirovanieIDobavlenieServis.Show();
+            Servis servis = new Servis();
+            servis.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

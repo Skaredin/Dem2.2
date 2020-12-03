@@ -94,8 +94,8 @@ namespace Dem2._2
         private void Nazad_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RedaktirovanieIDobavlenieKlienta redaktirovanieIDobavlenieKlienta = new RedaktirovanieIDobavlenieKlienta();
-            redaktirovanieIDobavlenieKlienta.Show();
+            Klient klient = new Klient();
+            klient.Show();
         }
     }
 }

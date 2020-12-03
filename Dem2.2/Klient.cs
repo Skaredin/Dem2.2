@@ -16,7 +16,9 @@ namespace Dem2._2
         public Klient()
         {
             InitializeComponent();
-
+            
+            
+               
             if (Properties.Settings.Default.Polsovatel == "Администратор")
             { 
             
@@ -54,6 +56,8 @@ namespace Dem2._2
                 this.genderTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Gender);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "___Dem2Skarredin2DataSet.Client". При необходимости она может быть перемещена или удалена.
                 this.clientTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Client);
+                string ds = dataGridViewTextBoxColumn10.Name.ToString();
+                Column1.Image = Image.FromFile(ds.Replace(@" ", @""));
             }
             catch (Exception )
             {

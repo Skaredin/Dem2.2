@@ -52,6 +52,8 @@ namespace Dem2._2
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "___Dem2Skarredin2DataSet.Service". При необходимости она может быть перемещена или удалена.
                 this.serviceTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Service);  // мяTODO: данная строка кода позволяет загрузить данные в таблицу "___Dem2Skarredin2DataSet.Service". При необходимости она может быть перемещена или удалена.
                 this.serviceTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Service);
+                string ds = dataGridViewTextBoxColumn7.Name.ToString();
+                Column1.Image = Image.FromFile(ds.Replace(@" ", @""));
             }
             catch (Exception ex)
             {
