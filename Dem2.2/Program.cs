@@ -16,7 +16,10 @@ namespace Dem2._2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            MessageBox.Show("Есть в системе 2 пользователя это администратор пароль логин 0000, и есть пользователь пароль логин 1111");
+            Application.Run(new Avtorizacia());
+          
+
         }
     }
 }
