@@ -58,6 +58,9 @@ namespace Dem2._2
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nazad = new System.Windows.Forms.Label();
             this.redaktirovanieIDobavlenieServis = new System.Windows.Forms.Button();
+            this.Poisk = new System.Windows.Forms.TextBox();
+            this.Kolvo = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.___Dem2Skarredin2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingNavigator)).BeginInit();
@@ -239,6 +242,7 @@ namespace Dem2._2
             this.serviceDataGridView.Name = "serviceDataGridView";
             this.serviceDataGridView.Size = new System.Drawing.Size(776, 361);
             this.serviceDataGridView.TabIndex = 1;
+            this.serviceDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.serviceDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -304,11 +308,41 @@ namespace Dem2._2
             this.redaktirovanieIDobavlenieServis.UseVisualStyleBackColor = true;
             this.redaktirovanieIDobavlenieServis.Click += new System.EventHandler(this.redaktirovanieIDobavlenieServis_Click);
             // 
+            // Poisk
+            // 
+            this.Poisk.Location = new System.Drawing.Point(357, 48);
+            this.Poisk.Name = "Poisk";
+            this.Poisk.Size = new System.Drawing.Size(179, 20);
+            this.Poisk.TabIndex = 6;
+            this.Poisk.Text = "Поиск";
+            this.Poisk.TextChanged += new System.EventHandler(this.Poisk_TextChanged);
+            // 
+            // Kolvo
+            // 
+            this.Kolvo.AutoSize = true;
+            this.Kolvo.Location = new System.Drawing.Point(49, 457);
+            this.Kolvo.Name = "Kolvo";
+            this.Kolvo.Size = new System.Drawing.Size(0, 13);
+            this.Kolvo.TabIndex = 7;
+            // 
+            // label
+            // 
+            this.label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(312, 49);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(39, 13);
+            this.label.TabIndex = 19;
+            this.label.Text = "Поиск";
+            // 
             // Servis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 479);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.Kolvo);
+            this.Controls.Add(this.Poisk);
             this.Controls.Add(this.redaktirovanieIDobavlenieServis);
             this.Controls.Add(this.Nazad);
             this.Controls.Add(this.serviceDataGridView);
@@ -356,5 +390,8 @@ namespace Dem2._2
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.Label Nazad;
         private System.Windows.Forms.Button redaktirovanieIDobavlenieServis;
+        private System.Windows.Forms.TextBox Poisk;
+        private System.Windows.Forms.Label Kolvo;
+        private System.Windows.Forms.Label label;
     }
 }

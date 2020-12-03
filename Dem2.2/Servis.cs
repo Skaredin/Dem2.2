@@ -16,6 +16,7 @@ namespace Dem2._2
         public Servis()
         {
             InitializeComponent();
+        
             if (Properties.Settings.Default.Polsovatel == "Администратор")
             {
 
@@ -75,6 +76,20 @@ namespace Dem2._2
             redaktirovanieIDobavlenieServis.Show();
         }
 
+        private void Poisk_TextChanged(object sender, EventArgs e)
+        {
+           
+
+            serviceBindingSource.Filter = "[Title] LIKE'" + Poisk.Text + "%'";
+            Kolvo.Text = serviceDataGridView.RowCount.ToString();
+        }
+
+        private void serviceDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+       
         
     }
 }
