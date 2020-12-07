@@ -97,5 +97,10 @@ namespace Dem2._2
             Klient klient = new Klient();
             klient.Show();
         }
+
+        private void PhotoPB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

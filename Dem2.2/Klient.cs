@@ -87,22 +87,16 @@ namespace Dem2._2
             try
             {
                 if (genderCode.Text == "Мужской")
-                {
-                    string tr = "GenderCode like'*" + "м" + "'";
-                    clientBindingSource.Filter = tr;
-                   
+                {                  
+                    clientBindingSource.Filter = "GenderCode like'*" + "м" + "'";
                 }
                 else if (genderCode.Text == "Женский")
                 {
-                    
-                    string tr = "GenderCode like'*" + "ж" + "'";
-                    clientBindingSource.Filter = tr;
+                    clientBindingSource.Filter = "GenderCode like'*" + "ж" + "'";
                 }
                 else if (genderCode.Text == "Все")
                 {
-                    
-                    string tr = "GenderCode like'*" + "" + "'";
-                    clientBindingSource.Filter = tr;
+                    clientBindingSource.Filter = "GenderCode like'*" + "" + "'";
                 }
 
 
@@ -122,8 +116,8 @@ namespace Dem2._2
             try
             {
 
-                string tr = "FirstName like'*" + filter.Text + "*' or LastName like'*" + filter.Text + "*' or Patronymic like'*" + filter.Text + "*' or Email like'*" + filter.Text + "*' or Phone like'*" + filter.Text + "'";
-                clientBindingSource.Filter = tr;
+                 
+                clientBindingSource.Filter = "FirstName like'*" + filter.Text + "*' or LastName like'*" + filter.Text + "*' or Patronymic like'*" + filter.Text + "*' or Email like'*" + filter.Text + "*' or Phone like'*" + filter.Text + "'";
             }
             catch (Exception ex)
             {

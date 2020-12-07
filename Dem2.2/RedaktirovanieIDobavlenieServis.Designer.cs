@@ -37,8 +37,8 @@ namespace Dem2._2
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label discountLabel;
             System.Windows.Forms.Label mainImagePathLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RedaktirovanieIDobavlenieServis));
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RedaktirovanieIDobavlenieServis));
             this.___Dem2Skarredin2DataSet = new Dem2._2.@__Dem2Skarredin2DataSet();
             this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.serviceTableAdapter = new Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.ServiceTableAdapter();
@@ -148,6 +148,15 @@ namespace Dem2._2
             mainImagePathLabel.Size = new System.Drawing.Size(90, 13);
             mainImagePathLabel.TabIndex = 13;
             mainImagePathLabel.Text = "Main Image Path:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(23, 126);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(192, 13);
+            label1.TabIndex = 37;
+            label1.Text = "Duration перевод из секунд в время:";
             // 
             // ___Dem2Skarredin2DataSet
             // 
@@ -311,6 +320,7 @@ namespace Dem2._2
             this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "ID", true));
             this.iDTextBox.Location = new System.Drawing.Point(217, 45);
             this.iDTextBox.Name = "iDTextBox";
+            this.iDTextBox.ReadOnly = true;
             this.iDTextBox.Size = new System.Drawing.Size(415, 20);
             this.iDTextBox.TabIndex = 2;
             // 
@@ -542,15 +552,6 @@ namespace Dem2._2
             this.time.ReadOnly = true;
             this.time.Size = new System.Drawing.Size(415, 20);
             this.time.TabIndex = 36;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(23, 126);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(192, 13);
-            label1.TabIndex = 37;
-            label1.Text = "Duration перевод из секунд в время:";
             // 
             // RedaktirovanieIDobavlenieServis
             // 

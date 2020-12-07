@@ -134,6 +134,7 @@ namespace Dem2._2
             this.serviceBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.___Dem2Skarredin2DataSet);
             lol();
+            MessageBox.Show("Данные сохранены");
         }
 
         private void Nazad_Click(object sender, EventArgs e)

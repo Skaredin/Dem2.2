@@ -299,6 +299,7 @@ namespace Dem2._2
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -587,6 +588,7 @@ namespace Dem2._2
             this.PhotoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.PhotoPB.TabIndex = 26;
             this.PhotoPB.TabStop = false;
+            this.PhotoPB.Click += new System.EventHandler(this.PhotoPB_Click);
             // 
             // genderBindingSource
             // 
