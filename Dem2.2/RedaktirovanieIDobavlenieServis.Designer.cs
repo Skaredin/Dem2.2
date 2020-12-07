@@ -71,6 +71,7 @@ namespace Dem2._2
             this.Save = new System.Windows.Forms.Button();
             this.Nazad = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.TextBox();
+            this.serviceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             iDLabel = new System.Windows.Forms.Label();
             titleLabel = new System.Windows.Forms.Label();
             costLabel = new System.Windows.Forms.Label();
@@ -84,6 +85,7 @@ namespace Dem2._2
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingNavigator)).BeginInit();
             this.serviceBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // iDLabel
@@ -368,14 +370,13 @@ namespace Dem2._2
             // mainImagePathComboBox
             // 
             this.mainImagePathComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "MainImagePath", true));
+            this.mainImagePathComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.serviceBindingSource1, "MainImagePath", true));
             this.mainImagePathComboBox.FormattingEnabled = true;
             this.mainImagePathComboBox.Items.AddRange(new object[] {
             "Услугисалонакрасоты\\mask.jpeg",
             "Услугисалонакрасоты\\96.png",
-            "Услугисалонакрасоты\\96.png",
             "Услугисалонакрасоты\\стрижка.png",
             "Услугисалонакрасоты\\makeup.jpg",
-            "Услугисалонакрасоты\\96.png",
             "Услугисалонакрасоты\\массаж.jpg",
             "Услугисалонакрасоты\\piling.jpg",
             "Услугисалонакрасоты\\Гречишныймассаж.jpg",
@@ -384,92 +385,30 @@ namespace Dem2._2
             "Услугисалонакрасоты\\Демакияж.jpg",
             "Услугисалонакрасоты\\Депиляциявоском.jpg",
             "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\стрижка.png",
             "Услугисалонакрасоты\\ногти.png",
             "Услугисалонакрасоты\\Европейскийманикюр.jpg",
             "Услугисалонакрасоты\\ИК-сауна.jpg",
-            "Услугисалонакрасоты\\96.png",
-            "Услугисалонакрасоты\\массаж.jpg",
             "Услугисалонакрасоты\\Классическийманикюр.png",
-            "Услугисалонакрасоты\\массаж.jpg",
             "Услугисалонакрасоты\\Экспресс-педикюр.jpg",
             "Услугисалонакрасоты\\Комбинированныйманикюр.jpg",
             "Услугисалонакрасоты\\122454.png",
-            "Услугисалонакрасоты\\122454.png",
             "Услугисалонакрасоты\\Контурнаяпластика.jpg",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\piling.jpg",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\ногти.png",
-            "Услугисалонакрасоты\\makeup.jpg",
-            "Услугисалонакрасоты\\mask.jpeg",
-            "Услугисалонакрасоты\\массаж.jpg",
-            "Услугисалонакрасоты\\массаж.jpg",
-            "Услугисалонакрасоты\\массаж.jpg",
-            "Услугисалонакрасоты\\массаж.jpg",
-            "Услугисалонакрасоты\\96.png",
             "Услугисалонакрасоты\\Мезотерапия.jpg",
-            "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\piling.jpg",
-            "Услугисалонакрасоты\\face.png",
             "Услугисалонакрасоты\\Моделированиересниц.jpg",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\face.png",
             "Услугисалонакрасоты\\man.png",
-            "Услугисалонакрасоты\\ногти.png",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\массаж.jpg",
-            "Услугисалонакрасоты\\face.png",
             "Услугисалонакрасоты\\Окрашиваниебровей.jpg",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\брови.png",
             "Услугисалонакрасоты\\брови.png",
             "Услугисалонакрасоты\\Парафинотерапия.jpg",
-            "Услугисалонакрасоты\\брови.png",
             "Услугисалонакрасоты\\Проколушейпистолетом.png",
-            "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\Ресницы.png",
-            "Услугисалонакрасоты\\ногти.png",
             "Услугисалонакрасоты\\Покрытиеногтейгель-лаком.jpg",
             "Услугисалонакрасоты\\Полировканогтей.jpg",
-            "Услугисалонакрасоты\\piling.jpg",
-            "Услугисалонакрасоты\\Ресницы.png",
             "Услугисалонакрасоты\\Прессотерапия.jpg",
-            "Услугисалонакрасоты\\Проколушейпистолетом.png",
-            "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\ногти.png",
-            "Услугисалонакрасоты\\массаж.jpg",
-            "Услугисалонакрасоты\\стрижка.png",
-            "Услугисалонакрасоты\\ногти.png",
             "Услугисалонакрасоты\\Снятиересниц.jpg",
             "Услугисалонакрасоты\\soliarij.jpg",
-            "Услугисалонакрасоты\\массаж.jpg",
             "Услугисалонакрасоты\\Стоун-терапия.jpg",
-            "Услугисалонакрасоты\\man.png",
-            "Услугисалонакрасоты\\стрижка.png",
-            "Услугисалонакрасоты\\стрижка.png",
-            "Услугисалонакрасоты\\брови.png",
-            "Услугисалонакрасоты\\96.png",
-            "Услугисалонакрасоты\\face.png",
             "Услугисалонакрасоты\\Укреплениеногтейгелем.jpg",
-            "Услугисалонакрасоты\\piling.jpg",
-            "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\face.png",
-            "Услугисалонакрасоты\\стрижка.png",
-            "Услугисалонакрасоты\\piling.jpg",
-            "Услугисалонакрасоты\\Ресницы.png",
             "Услугисалонакрасоты\\Шугаринг.jpg",
-            "Услугисалонакрасоты\\ЭкспрессSPA.png",
-            "Услугисалонакрасоты\\Экспресс-педикюр.jpg",
-            "Услугисалонакрасоты\\piling.jpg"});
+            "Услугисалонакрасоты\\ЭкспрессSPA.png"});
             this.mainImagePathComboBox.Location = new System.Drawing.Point(217, 227);
             this.mainImagePathComboBox.Name = "mainImagePathComboBox";
             this.mainImagePathComboBox.Size = new System.Drawing.Size(415, 21);
@@ -553,6 +492,11 @@ namespace Dem2._2
             this.time.Size = new System.Drawing.Size(415, 20);
             this.time.TabIndex = 36;
             // 
+            // serviceBindingSource1
+            // 
+            this.serviceBindingSource1.DataMember = "Service";
+            this.serviceBindingSource1.DataSource = this.___Dem2Skarredin2DataSet;
+            // 
             // RedaktirovanieIDobavlenieServis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,6 +535,7 @@ namespace Dem2._2
             this.serviceBindingNavigator.ResumeLayout(false);
             this.serviceBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -630,5 +575,6 @@ namespace Dem2._2
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Label Nazad;
         private System.Windows.Forms.TextBox time;
+        private System.Windows.Forms.BindingSource serviceBindingSource1;
     }
 }
