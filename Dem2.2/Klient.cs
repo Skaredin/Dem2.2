@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Dem2._2.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -58,6 +60,18 @@ namespace Dem2._2
                 this.clientTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Client);
                 string ds = dataGridViewTextBoxColumn10.Name.ToString();
                 Column1.Image = Image.FromFile(ds.Replace(@" ", @""));
+                initialPage = 0; pageSize = 25;
+
+
+
+                db.Client.OrderBy(c => c.ID)//.Skip((initialPage * pageSize))
+                                                            .Take(25)
+                                                           .Load();
+                var Clients = db.Client.Local.ToBindingList()//.Skip((initialPage * pageSize))
+                                                             //.Take(pageSize)
+                                                             ;
+                //ClientList - измененное имя DataGridView
+                clientDataGridView.DataSource = Clients;
             }
             catch (Exception )
             {
@@ -156,6 +170,47 @@ namespace Dem2._2
                 MessageBox.Show(ex.Message);
             }
            
+        }
+        int initialPage, pageSize;
+        Entities db = new Entities();
+        private void VivodL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            db.Client.Local.Clear();
+
+           
+                if (VivodL.SelectedIndex == 0)
+                {
+                    initialPage = 0; pageSize = 25;
+                }
+                else if (VivodL.SelectedIndex == 1)
+                {
+                    initialPage = 0; pageSize = 50;
+                }
+                else if (VivodL.SelectedIndex == 2)
+                {
+                    initialPage = 0; pageSize = 200;
+                }
+
+                if (VivodL.SelectedIndex != 3)
+                {
+                    db.Client.OrderBy(c => c.ID).Skip((initialPage * pageSize))
+                                                          .Take(pageSize)
+                                                          .Load();
+                }
+                else
+                {
+                    db.Client.OrderBy(c => c.ID).Skip((initialPage * pageSize))
+                                                        // .Take(25)
+                                                        .Load();
+                }
+
+
+
+                var Clients = db.Client.Local.ToBindingList();
+                clientDataGridView.DataSource = Clients;
+          
+           
+            
         }
     }
 }

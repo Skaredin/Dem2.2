@@ -48,6 +48,7 @@ namespace Dem2._2
             this.clientBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.clientDataGridView = new System.Windows.Forms.DataGridView();
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Nazad = new System.Windows.Forms.Label();
             this.clientTableAdapter = new Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.ClientTableAdapter();
             this.tableAdapterManager = new Dem2._2.@__Dem2Skarredin2DataSetTableAdapters.TableAdapterManager();
@@ -58,17 +59,17 @@ namespace Dem2._2
             this.label = new System.Windows.Forms.Label();
             this.genderCode = new System.Windows.Forms.ComboBox();
             this.filter = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.VivodL = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingNavigator)).BeginInit();
             this.clientBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
@@ -242,6 +243,11 @@ namespace Dem2._2
             this.genderBindingSource.DataMember = "Gender";
             this.genderBindingSource.DataSource = this.___Dem2Skarredin2DataSet;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Картинка";
+            this.Column1.Name = "Column1";
+            // 
             // Nazad
             // 
             this.Nazad.AutoSize = true;
@@ -345,54 +351,26 @@ namespace Dem2._2
             this.filter.TabIndex = 16;
             this.filter.TextChanged += new System.EventHandler(this.filter_TextChanged);
             // 
-            // dataGridViewTextBoxColumn1
+            // VivodL
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Номер";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.VivodL.FormattingEnabled = true;
+            this.VivodL.Items.AddRange(new object[] {
+            "Все",
+            "25 элементов",
+            "50 элементов",
+            "200 элементов"});
+            this.VivodL.Location = new System.Drawing.Point(30, 76);
+            this.VivodL.Name = "VivodL";
+            this.VivodL.Size = new System.Drawing.Size(121, 21);
+            this.VivodL.TabIndex = 22;
+            this.VivodL.Text = "Всё";
+            this.VivodL.SelectedIndexChanged += new System.EventHandler(this.VivodL_SelectedIndexChanged);
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FirstName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Фамилия";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "LastName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Имя";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Patronymic";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Отчество";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Birthday";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Дата рождения";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "RegistrationDate";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Дата регистрации";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Email";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Phone";
-            this.dataGridViewTextBoxColumn8.HeaderText = "телефон";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "PhotoPath";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Путь к фото";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -405,22 +383,61 @@ namespace Dem2._2
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn9.ValueMember = "Code";
             // 
-            // dataGridViewTextBoxColumn10
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "PhotoPath";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Путь к фото";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Phone";
+            this.dataGridViewTextBoxColumn8.HeaderText = "телефон";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // Column1
+            // dataGridViewTextBoxColumn7
             // 
-            this.Column1.HeaderText = "Картинка";
-            this.Column1.Name = "Column1";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "RegistrationDate";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Дата регистрации";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Birthday";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Дата рождения";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Patronymic";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Отчество";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Имя";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Фамилия";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Номер";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // Klient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 450);
+            this.Controls.Add(this.VivodL);
             this.Controls.Add(this.IToA);
             this.Controls.Add(this.AToI);
             this.Controls.Add(this.label);
@@ -474,6 +491,8 @@ namespace Dem2._2
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.ComboBox genderCode;
         private System.Windows.Forms.TextBox filter;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.ComboBox VivodL;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -484,6 +503,5 @@ namespace Dem2._2
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }
