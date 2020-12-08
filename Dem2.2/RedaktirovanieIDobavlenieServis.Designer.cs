@@ -63,6 +63,7 @@ namespace Dem2._2
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.discountTextBox = new System.Windows.Forms.TextBox();
             this.mainImagePathComboBox = new System.Windows.Forms.ComboBox();
+            this.serviceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.PhotoPB = new System.Windows.Forms.PictureBox();
             this.Deleted = new System.Windows.Forms.Button();
             this.Left = new System.Windows.Forms.Button();
@@ -71,7 +72,6 @@ namespace Dem2._2
             this.Save = new System.Windows.Forms.Button();
             this.Nazad = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.TextBox();
-            this.serviceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             iDLabel = new System.Windows.Forms.Label();
             titleLabel = new System.Windows.Forms.Label();
             costLabel = new System.Windows.Forms.Label();
@@ -84,8 +84,8 @@ namespace Dem2._2
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingNavigator)).BeginInit();
             this.serviceBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPB)).BeginInit();
             this.SuspendLayout();
             // 
             // iDLabel
@@ -218,7 +218,7 @@ namespace Dem2._2
             this.serviceBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.serviceBindingNavigator.Name = "serviceBindingNavigator";
             this.serviceBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.serviceBindingNavigator.Size = new System.Drawing.Size(868, 25);
+            this.serviceBindingNavigator.Size = new System.Drawing.Size(680, 25);
             this.serviceBindingNavigator.TabIndex = 0;
             this.serviceBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -323,7 +323,7 @@ namespace Dem2._2
             this.iDTextBox.Location = new System.Drawing.Point(217, 45);
             this.iDTextBox.Name = "iDTextBox";
             this.iDTextBox.ReadOnly = true;
-            this.iDTextBox.Size = new System.Drawing.Size(415, 20);
+            this.iDTextBox.Size = new System.Drawing.Size(208, 20);
             this.iDTextBox.TabIndex = 2;
             // 
             // titleTextBox
@@ -331,7 +331,7 @@ namespace Dem2._2
             this.titleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "Title", true));
             this.titleTextBox.Location = new System.Drawing.Point(217, 71);
             this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(415, 20);
+            this.titleTextBox.Size = new System.Drawing.Size(208, 20);
             this.titleTextBox.TabIndex = 4;
             // 
             // costTextBox
@@ -339,7 +339,7 @@ namespace Dem2._2
             this.costTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "Cost", true));
             this.costTextBox.Location = new System.Drawing.Point(217, 97);
             this.costTextBox.Name = "costTextBox";
-            this.costTextBox.Size = new System.Drawing.Size(415, 20);
+            this.costTextBox.Size = new System.Drawing.Size(208, 20);
             this.costTextBox.TabIndex = 6;
             // 
             // durationInSecondsTextBox
@@ -347,7 +347,7 @@ namespace Dem2._2
             this.durationInSecondsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "DurationInSeconds", true));
             this.durationInSecondsTextBox.Location = new System.Drawing.Point(217, 149);
             this.durationInSecondsTextBox.Name = "durationInSecondsTextBox";
-            this.durationInSecondsTextBox.Size = new System.Drawing.Size(415, 20);
+            this.durationInSecondsTextBox.Size = new System.Drawing.Size(208, 20);
             this.durationInSecondsTextBox.TabIndex = 8;
             this.durationInSecondsTextBox.TextChanged += new System.EventHandler(this.durationInSecondsTextBox_TextChanged);
             // 
@@ -356,7 +356,7 @@ namespace Dem2._2
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "Description", true));
             this.descriptionTextBox.Location = new System.Drawing.Point(217, 175);
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(415, 20);
+            this.descriptionTextBox.Size = new System.Drawing.Size(208, 20);
             this.descriptionTextBox.TabIndex = 10;
             // 
             // discountTextBox
@@ -364,7 +364,7 @@ namespace Dem2._2
             this.discountTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "Discount", true));
             this.discountTextBox.Location = new System.Drawing.Point(217, 201);
             this.discountTextBox.Name = "discountTextBox";
-            this.discountTextBox.Size = new System.Drawing.Size(415, 20);
+            this.discountTextBox.Size = new System.Drawing.Size(208, 20);
             this.discountTextBox.TabIndex = 12;
             // 
             // mainImagePathComboBox
@@ -411,15 +411,21 @@ namespace Dem2._2
             "Услугисалонакрасоты\\ЭкспрессSPA.png"});
             this.mainImagePathComboBox.Location = new System.Drawing.Point(217, 227);
             this.mainImagePathComboBox.Name = "mainImagePathComboBox";
-            this.mainImagePathComboBox.Size = new System.Drawing.Size(415, 21);
+            this.mainImagePathComboBox.Size = new System.Drawing.Size(208, 21);
             this.mainImagePathComboBox.TabIndex = 14;
             this.mainImagePathComboBox.SelectedIndexChanged += new System.EventHandler(this.mainImagePathComboBox_SelectedIndexChanged);
             // 
+            // serviceBindingSource1
+            // 
+            this.serviceBindingSource1.DataMember = "Service";
+            this.serviceBindingSource1.DataSource = this.___Dem2Skarredin2DataSet;
+            // 
             // PhotoPB
             // 
-            this.PhotoPB.Location = new System.Drawing.Point(638, 45);
+            this.PhotoPB.Location = new System.Drawing.Point(431, 45);
             this.PhotoPB.Name = "PhotoPB";
-            this.PhotoPB.Size = new System.Drawing.Size(230, 203);
+            this.PhotoPB.Size = new System.Drawing.Size(238, 238);
+            this.PhotoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PhotoPB.TabIndex = 32;
             this.PhotoPB.TabStop = false;
             // 
@@ -489,19 +495,14 @@ namespace Dem2._2
             this.time.Location = new System.Drawing.Point(217, 123);
             this.time.Name = "time";
             this.time.ReadOnly = true;
-            this.time.Size = new System.Drawing.Size(415, 20);
+            this.time.Size = new System.Drawing.Size(208, 20);
             this.time.TabIndex = 36;
-            // 
-            // serviceBindingSource1
-            // 
-            this.serviceBindingSource1.DataMember = "Service";
-            this.serviceBindingSource1.DataSource = this.___Dem2Skarredin2DataSet;
             // 
             // RedaktirovanieIDobavlenieServis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 297);
+            this.ClientSize = new System.Drawing.Size(680, 297);
             this.Controls.Add(label1);
             this.Controls.Add(this.time);
             this.Controls.Add(this.Nazad);
@@ -534,8 +535,8 @@ namespace Dem2._2
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingNavigator)).EndInit();
             this.serviceBindingNavigator.ResumeLayout(false);
             this.serviceBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

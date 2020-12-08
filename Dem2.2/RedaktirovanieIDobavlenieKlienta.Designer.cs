@@ -243,7 +243,7 @@ namespace Dem2._2
             this.clientBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.clientBindingNavigator.Name = "clientBindingNavigator";
             this.clientBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clientBindingNavigator.Size = new System.Drawing.Size(598, 25);
+            this.clientBindingNavigator.Size = new System.Drawing.Size(756, 25);
             this.clientBindingNavigator.TabIndex = 0;
             this.clientBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -347,7 +347,7 @@ namespace Dem2._2
             this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "ID", true));
             this.iDTextBox.Location = new System.Drawing.Point(133, 59);
             this.iDTextBox.Name = "iDTextBox";
-            this.iDTextBox.Size = new System.Drawing.Size(142, 20);
+            this.iDTextBox.Size = new System.Drawing.Size(304, 20);
             this.iDTextBox.TabIndex = 2;
             // 
             // firstNameTextBox
@@ -355,7 +355,7 @@ namespace Dem2._2
             this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "FirstName", true));
             this.firstNameTextBox.Location = new System.Drawing.Point(133, 85);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(142, 20);
+            this.firstNameTextBox.Size = new System.Drawing.Size(304, 20);
             this.firstNameTextBox.TabIndex = 4;
             // 
             // lastNameTextBox
@@ -363,7 +363,7 @@ namespace Dem2._2
             this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "LastName", true));
             this.lastNameTextBox.Location = new System.Drawing.Point(133, 111);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(142, 20);
+            this.lastNameTextBox.Size = new System.Drawing.Size(304, 20);
             this.lastNameTextBox.TabIndex = 6;
             // 
             // patronymicTextBox
@@ -371,7 +371,7 @@ namespace Dem2._2
             this.patronymicTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "Patronymic", true));
             this.patronymicTextBox.Location = new System.Drawing.Point(133, 137);
             this.patronymicTextBox.Name = "patronymicTextBox";
-            this.patronymicTextBox.Size = new System.Drawing.Size(142, 20);
+            this.patronymicTextBox.Size = new System.Drawing.Size(304, 20);
             this.patronymicTextBox.TabIndex = 8;
             // 
             // birthdayDateTimePicker
@@ -379,7 +379,7 @@ namespace Dem2._2
             this.birthdayDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientBindingSource, "Birthday", true));
             this.birthdayDateTimePicker.Location = new System.Drawing.Point(133, 163);
             this.birthdayDateTimePicker.Name = "birthdayDateTimePicker";
-            this.birthdayDateTimePicker.Size = new System.Drawing.Size(142, 20);
+            this.birthdayDateTimePicker.Size = new System.Drawing.Size(304, 20);
             this.birthdayDateTimePicker.TabIndex = 10;
             // 
             // registrationDateDateTimePicker
@@ -387,7 +387,7 @@ namespace Dem2._2
             this.registrationDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientBindingSource, "RegistrationDate", true));
             this.registrationDateDateTimePicker.Location = new System.Drawing.Point(133, 189);
             this.registrationDateDateTimePicker.Name = "registrationDateDateTimePicker";
-            this.registrationDateDateTimePicker.Size = new System.Drawing.Size(142, 20);
+            this.registrationDateDateTimePicker.Size = new System.Drawing.Size(304, 20);
             this.registrationDateDateTimePicker.TabIndex = 12;
             // 
             // emailTextBox
@@ -395,7 +395,7 @@ namespace Dem2._2
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "Email", true));
             this.emailTextBox.Location = new System.Drawing.Point(133, 215);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(142, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(304, 20);
             this.emailTextBox.TabIndex = 14;
             // 
             // phoneTextBox
@@ -403,7 +403,7 @@ namespace Dem2._2
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "Phone", true));
             this.phoneTextBox.Location = new System.Drawing.Point(133, 241);
             this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(142, 20);
+            this.phoneTextBox.Size = new System.Drawing.Size(304, 20);
             this.phoneTextBox.TabIndex = 16;
             // 
             // genderCodeComboBox
@@ -415,7 +415,7 @@ namespace Dem2._2
             "м"});
             this.genderCodeComboBox.Location = new System.Drawing.Point(133, 267);
             this.genderCodeComboBox.Name = "genderCodeComboBox";
-            this.genderCodeComboBox.Size = new System.Drawing.Size(142, 21);
+            this.genderCodeComboBox.Size = new System.Drawing.Size(304, 21);
             this.genderCodeComboBox.TabIndex = 18;
             // 
             // photoPathComboBox
@@ -526,7 +526,7 @@ namespace Dem2._2
             ""});
             this.photoPathComboBox.Location = new System.Drawing.Point(133, 294);
             this.photoPathComboBox.Name = "photoPathComboBox";
-            this.photoPathComboBox.Size = new System.Drawing.Size(142, 21);
+            this.photoPathComboBox.Size = new System.Drawing.Size(304, 21);
             this.photoPathComboBox.TabIndex = 20;
             this.photoPathComboBox.SelectedIndexChanged += new System.EventHandler(this.photoPathComboBox_SelectedIndexChanged);
             // 
@@ -582,10 +582,13 @@ namespace Dem2._2
             // 
             // PhotoPB
             // 
-            this.PhotoPB.Location = new System.Drawing.Point(281, 62);
+            this.PhotoPB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhotoPB.Location = new System.Drawing.Point(443, 60);
             this.PhotoPB.Name = "PhotoPB";
-            this.PhotoPB.Size = new System.Drawing.Size(262, 255);
-            this.PhotoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PhotoPB.Size = new System.Drawing.Size(292, 292);
+            this.PhotoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PhotoPB.TabIndex = 26;
             this.PhotoPB.TabStop = false;
             this.PhotoPB.Click += new System.EventHandler(this.PhotoPB_Click);
@@ -614,7 +617,7 @@ namespace Dem2._2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 373);
+            this.ClientSize = new System.Drawing.Size(756, 373);
             this.Controls.Add(this.Nazad);
             this.Controls.Add(this.PhotoPB);
             this.Controls.Add(this.Deleted);
