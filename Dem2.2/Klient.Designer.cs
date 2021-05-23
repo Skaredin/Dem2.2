@@ -115,7 +115,7 @@ namespace Dem2._2
             this.clientBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.clientBindingNavigator.Name = "clientBindingNavigator";
             this.clientBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clientBindingNavigator.Size = new System.Drawing.Size(1148, 25);
+            this.clientBindingNavigator.Size = new System.Drawing.Size(1144, 25);
             this.clientBindingNavigator.TabIndex = 0;
             this.clientBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -181,6 +181,7 @@ namespace Dem2._2
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -243,7 +244,7 @@ namespace Dem2._2
             this.clientDataGridView.DataSource = this.clientBindingSource;
             this.clientDataGridView.Location = new System.Drawing.Point(12, 123);
             this.clientDataGridView.Name = "clientDataGridView";
-            this.clientDataGridView.Size = new System.Drawing.Size(921, 332);
+            this.clientDataGridView.Size = new System.Drawing.Size(919, 332);
             this.clientDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -384,7 +385,7 @@ namespace Dem2._2
             // 
             this.label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(802, 80);
+            this.label.Location = new System.Drawing.Point(798, 80);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(67, 13);
             this.label.TabIndex = 18;
@@ -398,7 +399,7 @@ namespace Dem2._2
             "Все",
             "Мужской",
             "Женский"});
-            this.genderCode.Location = new System.Drawing.Point(1014, 77);
+            this.genderCode.Location = new System.Drawing.Point(1010, 77);
             this.genderCode.Name = "genderCode";
             this.genderCode.Size = new System.Drawing.Size(121, 21);
             this.genderCode.TabIndex = 17;
@@ -408,7 +409,7 @@ namespace Dem2._2
             // filter
             // 
             this.filter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.filter.Location = new System.Drawing.Point(875, 77);
+            this.filter.Location = new System.Drawing.Point(871, 77);
             this.filter.Name = "filter";
             this.filter.Size = new System.Drawing.Size(114, 20);
             this.filter.TabIndex = 16;
@@ -500,7 +501,7 @@ namespace Dem2._2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 745);
+            this.ClientSize = new System.Drawing.Size(1144, 506);
             this.Controls.Add(this.tagDataGridView);
             this.Controls.Add(this.Vivod);
             this.Controls.Add(this.VivodCombo);

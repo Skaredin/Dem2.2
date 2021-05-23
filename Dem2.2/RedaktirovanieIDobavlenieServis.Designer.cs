@@ -497,6 +497,7 @@ namespace Dem2._2
             this.time.ReadOnly = true;
             this.time.Size = new System.Drawing.Size(208, 20);
             this.time.TabIndex = 36;
+            this.time.TextChanged += new System.EventHandler(this.time_TextChanged);
             // 
             // RedaktirovanieIDobavlenieServis
             // 

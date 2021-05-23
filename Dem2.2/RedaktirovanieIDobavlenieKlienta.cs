@@ -37,7 +37,7 @@ namespace Dem2._2
             this.genderTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Gender);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "___Dem2Skarredin2DataSet.Client". При необходимости она может быть перемещена или удалена.
             this.clientTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Client);
-
+            Photo();
         }
 
         private void clientBindingNavigatorSaveItem_Click(object sender, EventArgs e)

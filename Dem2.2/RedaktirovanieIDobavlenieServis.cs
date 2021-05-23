@@ -167,5 +167,10 @@ namespace Dem2._2
 
             
         }
+
+        private void time_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
