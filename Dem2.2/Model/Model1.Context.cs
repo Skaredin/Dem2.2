@@ -15,6 +15,22 @@ namespace Dem2._2.Model
     
     public partial class Entities : DbContext
     {
+        private static Entities db;
+        public static Entities GetContext()
+        {
+            if (db == null)
+                db = new Entities();
+            return db;
+        
+        
+        }
+        public static Entities GetRefresh()
+        {
+            db = new Entities();
+
+            return db;
+        }
+
         public Entities()
             : base("name=Entities")
         {
@@ -37,5 +53,6 @@ namespace Dem2._2.Model
         public virtual DbSet<ServicePhoto> ServicePhoto { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tag> Tag { get; set; }
+        public virtual DbSet<Количество> Количество { get; set; }
     }
 }

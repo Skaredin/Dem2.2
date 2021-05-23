@@ -805,6 +805,41 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="КолДокTableAdapter" GeneratorDataComponentClassName="КолДокTableAdapter" Name="КолДок" UserDataComponentName="КолДокTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_Dem2Skarredin2ConnectionString (Settings)" DbObjectName="[#Dem2Skarredin2].dbo.КолДок" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ClientID, Expr1 FROM dbo.КолДок</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ClientID" DataSetColumn="ClientID" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="КоличествоTableAdapter" GeneratorDataComponentClassName="КоличествоTableAdapter" Name="Количество" UserDataComponentName="КоличествоTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_Dem2Skarredin2ConnectionString (Settings)" DbObjectName="[#Dem2Skarredin2].dbo.Количество" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Expr1, Expr2 FROM dbo.Количество</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -813,7 +848,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
   <xs:element name="__Dem2Skarredin2DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="__Dem2Skarredin2DataSet" msprop:Generator_UserDSName="__Dem2Skarredin2DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="AttachedProduct" msprop:Generator_TableClassName="AttachedProductDataTable" msprop:Generator_TableVarName="tableAttachedProduct" msprop:Generator_RowChangedName="AttachedProductRowChanged" msprop:Generator_TablePropName="AttachedProduct" msprop:Generator_RowDeletingName="AttachedProductRowDeleting" msprop:Generator_RowChangingName="AttachedProductRowChanging" msprop:Generator_RowEvHandlerName="AttachedProductRowChangeEventHandler" msprop:Generator_RowDeletedName="AttachedProductRowDeleted" msprop:Generator_RowClassName="AttachedProductRow" msprop:Generator_UserTableName="AttachedProduct" msprop:Generator_RowEvArgName="AttachedProductRowChangeEvent">
+        <xs:element name="AttachedProduct" msprop:Generator_TableClassName="AttachedProductDataTable" msprop:Generator_TableVarName="tableAttachedProduct" msprop:Generator_TablePropName="AttachedProduct" msprop:Generator_RowDeletingName="AttachedProductRowDeleting" msprop:Generator_RowChangingName="AttachedProductRowChanging" msprop:Generator_RowEvHandlerName="AttachedProductRowChangeEventHandler" msprop:Generator_RowDeletedName="AttachedProductRowDeleted" msprop:Generator_UserTableName="AttachedProduct" msprop:Generator_RowChangedName="AttachedProductRowChanged" msprop:Generator_RowEvArgName="AttachedProductRowChangeEvent" msprop:Generator_RowClassName="AttachedProductRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MainProductID" msprop:Generator_ColumnVarNameInTable="columnMainProductID" msprop:Generator_ColumnPropNameInRow="MainProductID" msprop:Generator_ColumnPropNameInTable="MainProductIDColumn" msprop:Generator_UserColumnName="MainProductID" type="xs:int" />
@@ -821,7 +856,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Client" msprop:Generator_TableClassName="ClientDataTable" msprop:Generator_TableVarName="tableClient" msprop:Generator_RowChangedName="ClientRowChanged" msprop:Generator_TablePropName="Client" msprop:Generator_RowDeletingName="ClientRowDeleting" msprop:Generator_RowChangingName="ClientRowChanging" msprop:Generator_RowEvHandlerName="ClientRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientRowDeleted" msprop:Generator_RowClassName="ClientRow" msprop:Generator_UserTableName="Client" msprop:Generator_RowEvArgName="ClientRowChangeEvent">
+        <xs:element name="Client" msprop:Generator_TableClassName="ClientDataTable" msprop:Generator_TableVarName="tableClient" msprop:Generator_TablePropName="Client" msprop:Generator_RowDeletingName="ClientRowDeleting" msprop:Generator_RowChangingName="ClientRowChanging" msprop:Generator_RowEvHandlerName="ClientRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientRowDeleted" msprop:Generator_UserTableName="Client" msprop:Generator_RowChangedName="ClientRowChanged" msprop:Generator_RowEvArgName="ClientRowChangeEvent" msprop:Generator_RowClassName="ClientRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -879,7 +914,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ClientService" msprop:Generator_TableClassName="ClientServiceDataTable" msprop:Generator_TableVarName="tableClientService" msprop:Generator_RowChangedName="ClientServiceRowChanged" msprop:Generator_TablePropName="ClientService" msprop:Generator_RowDeletingName="ClientServiceRowDeleting" msprop:Generator_RowChangingName="ClientServiceRowChanging" msprop:Generator_RowEvHandlerName="ClientServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientServiceRowDeleted" msprop:Generator_RowClassName="ClientServiceRow" msprop:Generator_UserTableName="ClientService" msprop:Generator_RowEvArgName="ClientServiceRowChangeEvent">
+        <xs:element name="ClientService" msprop:Generator_TableClassName="ClientServiceDataTable" msprop:Generator_TableVarName="tableClientService" msprop:Generator_TablePropName="ClientService" msprop:Generator_RowDeletingName="ClientServiceRowDeleting" msprop:Generator_RowChangingName="ClientServiceRowChanging" msprop:Generator_RowEvHandlerName="ClientServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientServiceRowDeleted" msprop:Generator_UserTableName="ClientService" msprop:Generator_RowChangedName="ClientServiceRowChanged" msprop:Generator_RowEvArgName="ClientServiceRowChangeEvent" msprop:Generator_RowClassName="ClientServiceRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -896,7 +931,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DocumentByService" msprop:Generator_TableClassName="DocumentByServiceDataTable" msprop:Generator_TableVarName="tableDocumentByService" msprop:Generator_RowChangedName="DocumentByServiceRowChanged" msprop:Generator_TablePropName="DocumentByService" msprop:Generator_RowDeletingName="DocumentByServiceRowDeleting" msprop:Generator_RowChangingName="DocumentByServiceRowChanging" msprop:Generator_RowEvHandlerName="DocumentByServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="DocumentByServiceRowDeleted" msprop:Generator_RowClassName="DocumentByServiceRow" msprop:Generator_UserTableName="DocumentByService" msprop:Generator_RowEvArgName="DocumentByServiceRowChangeEvent">
+        <xs:element name="DocumentByService" msprop:Generator_TableClassName="DocumentByServiceDataTable" msprop:Generator_TableVarName="tableDocumentByService" msprop:Generator_TablePropName="DocumentByService" msprop:Generator_RowDeletingName="DocumentByServiceRowDeleting" msprop:Generator_RowChangingName="DocumentByServiceRowChanging" msprop:Generator_RowEvHandlerName="DocumentByServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="DocumentByServiceRowDeleted" msprop:Generator_UserTableName="DocumentByService" msprop:Generator_RowChangedName="DocumentByServiceRowChanged" msprop:Generator_RowEvArgName="DocumentByServiceRowChangeEvent" msprop:Generator_RowClassName="DocumentByServiceRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -911,7 +946,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_RowClassName="GenderRow" msprop:Generator_UserTableName="Gender" msprop:Generator_RowEvArgName="GenderRowChangeEvent">
+        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_UserTableName="Gender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_RowEvArgName="GenderRowChangeEvent" msprop:Generator_RowClassName="GenderRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code">
@@ -931,7 +966,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Manufacturer" msprop:Generator_TableClassName="ManufacturerDataTable" msprop:Generator_TableVarName="tableManufacturer" msprop:Generator_RowChangedName="ManufacturerRowChanged" msprop:Generator_TablePropName="Manufacturer" msprop:Generator_RowDeletingName="ManufacturerRowDeleting" msprop:Generator_RowChangingName="ManufacturerRowChanging" msprop:Generator_RowEvHandlerName="ManufacturerRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufacturerRowDeleted" msprop:Generator_RowClassName="ManufacturerRow" msprop:Generator_UserTableName="Manufacturer" msprop:Generator_RowEvArgName="ManufacturerRowChangeEvent">
+        <xs:element name="Manufacturer" msprop:Generator_TableClassName="ManufacturerDataTable" msprop:Generator_TableVarName="tableManufacturer" msprop:Generator_TablePropName="Manufacturer" msprop:Generator_RowDeletingName="ManufacturerRowDeleting" msprop:Generator_RowChangingName="ManufacturerRowChanging" msprop:Generator_RowEvHandlerName="ManufacturerRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufacturerRowDeleted" msprop:Generator_UserTableName="Manufacturer" msprop:Generator_RowChangedName="ManufacturerRowChanged" msprop:Generator_RowEvArgName="ManufacturerRowChangeEvent" msprop:Generator_RowClassName="ManufacturerRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -946,7 +981,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Product" msprop:Generator_TableClassName="ProductDataTable" msprop:Generator_TableVarName="tableProduct" msprop:Generator_RowChangedName="ProductRowChanged" msprop:Generator_TablePropName="Product" msprop:Generator_RowDeletingName="ProductRowDeleting" msprop:Generator_RowChangingName="ProductRowChanging" msprop:Generator_RowEvHandlerName="ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductRowDeleted" msprop:Generator_RowClassName="ProductRow" msprop:Generator_UserTableName="Product" msprop:Generator_RowEvArgName="ProductRowChangeEvent">
+        <xs:element name="Product" msprop:Generator_TableClassName="ProductDataTable" msprop:Generator_TableVarName="tableProduct" msprop:Generator_TablePropName="Product" msprop:Generator_RowDeletingName="ProductRowDeleting" msprop:Generator_RowChangingName="ProductRowChanging" msprop:Generator_RowEvHandlerName="ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductRowDeleted" msprop:Generator_UserTableName="Product" msprop:Generator_RowChangedName="ProductRowChanged" msprop:Generator_RowEvArgName="ProductRowChangeEvent" msprop:Generator_RowClassName="ProductRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -977,7 +1012,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ProductPhoto" msprop:Generator_TableClassName="ProductPhotoDataTable" msprop:Generator_TableVarName="tableProductPhoto" msprop:Generator_RowChangedName="ProductPhotoRowChanged" msprop:Generator_TablePropName="ProductPhoto" msprop:Generator_RowDeletingName="ProductPhotoRowDeleting" msprop:Generator_RowChangingName="ProductPhotoRowChanging" msprop:Generator_RowEvHandlerName="ProductPhotoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductPhotoRowDeleted" msprop:Generator_RowClassName="ProductPhotoRow" msprop:Generator_UserTableName="ProductPhoto" msprop:Generator_RowEvArgName="ProductPhotoRowChangeEvent">
+        <xs:element name="ProductPhoto" msprop:Generator_TableClassName="ProductPhotoDataTable" msprop:Generator_TableVarName="tableProductPhoto" msprop:Generator_TablePropName="ProductPhoto" msprop:Generator_RowDeletingName="ProductPhotoRowDeleting" msprop:Generator_RowChangingName="ProductPhotoRowChanging" msprop:Generator_RowEvHandlerName="ProductPhotoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductPhotoRowDeleted" msprop:Generator_UserTableName="ProductPhoto" msprop:Generator_RowChangedName="ProductPhotoRowChanged" msprop:Generator_RowEvArgName="ProductPhotoRowChangeEvent" msprop:Generator_RowClassName="ProductPhotoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -992,7 +1027,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ProductSale" msprop:Generator_TableClassName="ProductSaleDataTable" msprop:Generator_TableVarName="tableProductSale" msprop:Generator_RowChangedName="ProductSaleRowChanged" msprop:Generator_TablePropName="ProductSale" msprop:Generator_RowDeletingName="ProductSaleRowDeleting" msprop:Generator_RowChangingName="ProductSaleRowChanging" msprop:Generator_RowEvHandlerName="ProductSaleRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductSaleRowDeleted" msprop:Generator_RowClassName="ProductSaleRow" msprop:Generator_UserTableName="ProductSale" msprop:Generator_RowEvArgName="ProductSaleRowChangeEvent">
+        <xs:element name="ProductSale" msprop:Generator_TableClassName="ProductSaleDataTable" msprop:Generator_TableVarName="tableProductSale" msprop:Generator_TablePropName="ProductSale" msprop:Generator_RowDeletingName="ProductSaleRowDeleting" msprop:Generator_RowChangingName="ProductSaleRowChanging" msprop:Generator_RowEvHandlerName="ProductSaleRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductSaleRowDeleted" msprop:Generator_UserTableName="ProductSale" msprop:Generator_RowChangedName="ProductSaleRowChanged" msprop:Generator_RowEvArgName="ProductSaleRowChangeEvent" msprop:Generator_RowClassName="ProductSaleRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1003,7 +1038,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Service" msprop:Generator_TableClassName="ServiceDataTable" msprop:Generator_TableVarName="tableService" msprop:Generator_RowChangedName="ServiceRowChanged" msprop:Generator_TablePropName="Service" msprop:Generator_RowDeletingName="ServiceRowDeleting" msprop:Generator_RowChangingName="ServiceRowChanging" msprop:Generator_RowEvHandlerName="ServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ServiceRowDeleted" msprop:Generator_RowClassName="ServiceRow" msprop:Generator_UserTableName="Service" msprop:Generator_RowEvArgName="ServiceRowChangeEvent">
+        <xs:element name="Service" msprop:Generator_TableClassName="ServiceDataTable" msprop:Generator_TableVarName="tableService" msprop:Generator_TablePropName="Service" msprop:Generator_RowDeletingName="ServiceRowDeleting" msprop:Generator_RowChangingName="ServiceRowChanging" msprop:Generator_RowEvHandlerName="ServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ServiceRowDeleted" msprop:Generator_UserTableName="Service" msprop:Generator_RowChangedName="ServiceRowChanged" msprop:Generator_RowEvArgName="ServiceRowChangeEvent" msprop:Generator_RowClassName="ServiceRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1034,7 +1069,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ServicePhoto" msprop:Generator_TableClassName="ServicePhotoDataTable" msprop:Generator_TableVarName="tableServicePhoto" msprop:Generator_RowChangedName="ServicePhotoRowChanged" msprop:Generator_TablePropName="ServicePhoto" msprop:Generator_RowDeletingName="ServicePhotoRowDeleting" msprop:Generator_RowChangingName="ServicePhotoRowChanging" msprop:Generator_RowEvHandlerName="ServicePhotoRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicePhotoRowDeleted" msprop:Generator_RowClassName="ServicePhotoRow" msprop:Generator_UserTableName="ServicePhoto" msprop:Generator_RowEvArgName="ServicePhotoRowChangeEvent">
+        <xs:element name="ServicePhoto" msprop:Generator_TableClassName="ServicePhotoDataTable" msprop:Generator_TableVarName="tableServicePhoto" msprop:Generator_TablePropName="ServicePhoto" msprop:Generator_RowDeletingName="ServicePhotoRowDeleting" msprop:Generator_RowChangingName="ServicePhotoRowChanging" msprop:Generator_RowEvHandlerName="ServicePhotoRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicePhotoRowDeleted" msprop:Generator_UserTableName="ServicePhoto" msprop:Generator_RowChangedName="ServicePhotoRowChanged" msprop:Generator_RowEvArgName="ServicePhotoRowChangeEvent" msprop:Generator_RowClassName="ServicePhotoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1049,7 +1084,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Tag" msprop:Generator_TableClassName="TagDataTable" msprop:Generator_TableVarName="tableTag" msprop:Generator_RowChangedName="TagRowChanged" msprop:Generator_TablePropName="Tag" msprop:Generator_RowDeletingName="TagRowDeleting" msprop:Generator_RowChangingName="TagRowChanging" msprop:Generator_RowEvHandlerName="TagRowChangeEventHandler" msprop:Generator_RowDeletedName="TagRowDeleted" msprop:Generator_RowClassName="TagRow" msprop:Generator_UserTableName="Tag" msprop:Generator_RowEvArgName="TagRowChangeEvent">
+        <xs:element name="Tag" msprop:Generator_TableClassName="TagDataTable" msprop:Generator_TableVarName="tableTag" msprop:Generator_TablePropName="Tag" msprop:Generator_RowDeletingName="TagRowDeleting" msprop:Generator_RowChangingName="TagRowChanging" msprop:Generator_RowEvHandlerName="TagRowChangeEventHandler" msprop:Generator_RowDeletedName="TagRowDeleted" msprop:Generator_UserTableName="Tag" msprop:Generator_RowChangedName="TagRowChanged" msprop:Generator_RowEvArgName="TagRowChangeEvent" msprop:Generator_RowClassName="TagRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1070,7 +1105,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TagOfClient" msprop:Generator_TableClassName="TagOfClientDataTable" msprop:Generator_TableVarName="tableTagOfClient" msprop:Generator_RowChangedName="TagOfClientRowChanged" msprop:Generator_TablePropName="TagOfClient" msprop:Generator_RowDeletingName="TagOfClientRowDeleting" msprop:Generator_RowChangingName="TagOfClientRowChanging" msprop:Generator_RowEvHandlerName="TagOfClientRowChangeEventHandler" msprop:Generator_RowDeletedName="TagOfClientRowDeleted" msprop:Generator_RowClassName="TagOfClientRow" msprop:Generator_UserTableName="TagOfClient" msprop:Generator_RowEvArgName="TagOfClientRowChangeEvent">
+        <xs:element name="TagOfClient" msprop:Generator_TableClassName="TagOfClientDataTable" msprop:Generator_TableVarName="tableTagOfClient" msprop:Generator_TablePropName="TagOfClient" msprop:Generator_RowDeletingName="TagOfClientRowDeleting" msprop:Generator_RowChangingName="TagOfClientRowChanging" msprop:Generator_RowEvHandlerName="TagOfClientRowChangeEventHandler" msprop:Generator_RowDeletedName="TagOfClientRowDeleted" msprop:Generator_UserTableName="TagOfClient" msprop:Generator_RowChangedName="TagOfClientRowChanged" msprop:Generator_RowEvArgName="TagOfClientRowChangeEvent" msprop:Generator_RowClassName="TagOfClientRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ClientID" msprop:Generator_ColumnVarNameInTable="columnClientID" msprop:Generator_ColumnPropNameInRow="ClientID" msprop:Generator_ColumnPropNameInTable="ClientIDColumn" msprop:Generator_UserColumnName="ClientID" type="xs:int" />
@@ -1078,7 +1113,7 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ClientToServisViev" msprop:Generator_TableClassName="ClientToServisVievDataTable" msprop:Generator_TableVarName="tableClientToServisViev" msprop:Generator_TablePropName="ClientToServisViev" msprop:Generator_RowDeletingName="ClientToServisVievRowDeleting" msprop:Generator_RowChangingName="ClientToServisVievRowChanging" msprop:Generator_RowEvHandlerName="ClientToServisVievRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientToServisVievRowDeleted" msprop:Generator_UserTableName="ClientToServisViev" msprop:Generator_RowChangedName="ClientToServisVievRowChanged" msprop:Generator_RowEvArgName="ClientToServisVievRowChangeEvent" msprop:Generator_RowClassName="ClientToServisVievRow">
+        <xs:element name="ClientToServisViev" msprop:Generator_TableClassName="ClientToServisVievDataTable" msprop:Generator_TableVarName="tableClientToServisViev" msprop:Generator_RowChangedName="ClientToServisVievRowChanged" msprop:Generator_TablePropName="ClientToServisViev" msprop:Generator_RowDeletingName="ClientToServisVievRowDeleting" msprop:Generator_RowChangingName="ClientToServisVievRowChanging" msprop:Generator_RowEvHandlerName="ClientToServisVievRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientToServisVievRowDeleted" msprop:Generator_RowClassName="ClientToServisVievRow" msprop:Generator_UserTableName="ClientToServisViev" msprop:Generator_RowEvArgName="ClientToServisVievRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title">
@@ -1125,6 +1160,23 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
               </xs:element>
               <xs:element name="StartTime" msprop:Generator_ColumnVarNameInTable="columnStartTime" msprop:Generator_ColumnPropNameInRow="StartTime" msprop:Generator_ColumnPropNameInTable="StartTimeColumn" msprop:Generator_UserColumnName="StartTime" type="xs:dateTime" />
               <xs:element name="DurationInSeconds" msprop:Generator_ColumnVarNameInTable="columnDurationInSeconds" msprop:Generator_ColumnPropNameInRow="DurationInSeconds" msprop:Generator_ColumnPropNameInTable="DurationInSecondsColumn" msprop:Generator_UserColumnName="DurationInSeconds" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="КолДок" msprop:Generator_TableClassName="КолДокDataTable" msprop:Generator_TableVarName="tableКолДок" msprop:Generator_TablePropName="КолДок" msprop:Generator_RowDeletingName="КолДокRowDeleting" msprop:Generator_RowChangingName="КолДокRowChanging" msprop:Generator_RowEvHandlerName="КолДокRowChangeEventHandler" msprop:Generator_RowDeletedName="КолДокRowDeleted" msprop:Generator_UserTableName="КолДок" msprop:Generator_RowChangedName="КолДокRowChanged" msprop:Generator_RowEvArgName="КолДокRowChangeEvent" msprop:Generator_RowClassName="КолДокRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClientID" msprop:Generator_ColumnVarNameInTable="columnClientID" msprop:Generator_ColumnPropNameInRow="ClientID" msprop:Generator_ColumnPropNameInTable="ClientIDColumn" msprop:Generator_UserColumnName="ClientID" type="xs:int" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Количество" msprop:Generator_TableClassName="КоличествоDataTable" msprop:Generator_TableVarName="tableКоличество" msprop:Generator_TablePropName="Количество" msprop:Generator_RowDeletingName="КоличествоRowDeleting" msprop:Generator_RowChangingName="КоличествоRowChanging" msprop:Generator_RowEvHandlerName="КоличествоRowChangeEventHandler" msprop:Generator_RowDeletedName="КоличествоRowDeleted" msprop:Generator_UserTableName="Количество" msprop:Generator_RowChangedName="КоличествоRowChanged" msprop:Generator_RowEvArgName="КоличествоRowChangeEvent" msprop:Generator_RowClassName="КоличествоRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1184,22 +1236,26 @@ SELECT ClientID, TagID FROM TagOfClient WHERE (ClientID = @ClientID) AND (TagID 
       <xs:field xpath="mstns:ClientID" />
       <xs:field xpath="mstns:TagID" />
     </xs:unique>
+    <xs:unique name="Количество_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Количество" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_AttachedProduct_Product" msdata:parent="Product" msdata:child="AttachedProduct" msdata:parentkey="ID" msdata:childkey="MainProductID" msprop:Generator_UserChildTable="AttachedProduct" msprop:Generator_ChildPropName="GetAttachedProductRowsByFK_AttachedProduct_Product" msprop:Generator_UserRelationName="FK_AttachedProduct_Product" msprop:Generator_ParentPropName="ProductRowByFK_AttachedProduct_Product" msprop:Generator_RelationVarName="relationFK_AttachedProduct_Product" msprop:Generator_UserParentTable="Product" />
-      <msdata:Relationship name="FK_AttachedProduct_Product1" msdata:parent="Product" msdata:child="AttachedProduct" msdata:parentkey="ID" msdata:childkey="AttachedProductID" msprop:Generator_UserChildTable="AttachedProduct" msprop:Generator_ChildPropName="GetAttachedProductRowsByFK_AttachedProduct_Product1" msprop:Generator_UserRelationName="FK_AttachedProduct_Product1" msprop:Generator_ParentPropName="ProductRowByFK_AttachedProduct_Product1" msprop:Generator_RelationVarName="relationFK_AttachedProduct_Product1" msprop:Generator_UserParentTable="Product" />
-      <msdata:Relationship name="FK_Client_Gender" msdata:parent="Gender" msdata:child="Client" msdata:parentkey="Code" msdata:childkey="GenderCode" msprop:Generator_UserChildTable="Client" msprop:Generator_ChildPropName="GetClientRows" msprop:Generator_UserRelationName="FK_Client_Gender" msprop:Generator_ParentPropName="GenderRow" msprop:Generator_RelationVarName="relationFK_Client_Gender" msprop:Generator_UserParentTable="Gender" />
-      <msdata:Relationship name="FK_ClientService_Client" msdata:parent="Client" msdata:child="ClientService" msdata:parentkey="ID" msdata:childkey="ClientID" msprop:Generator_UserChildTable="ClientService" msprop:Generator_ChildPropName="GetClientServiceRows" msprop:Generator_UserRelationName="FK_ClientService_Client" msprop:Generator_RelationVarName="relationFK_ClientService_Client" msprop:Generator_UserParentTable="Client" msprop:Generator_ParentPropName="ClientRow" />
-      <msdata:Relationship name="FK_ClientService_Service" msdata:parent="Service" msdata:child="ClientService" msdata:parentkey="ID" msdata:childkey="ServiceID" msprop:Generator_UserChildTable="ClientService" msprop:Generator_ChildPropName="GetClientServiceRows" msprop:Generator_UserRelationName="FK_ClientService_Service" msprop:Generator_ParentPropName="ServiceRow" msprop:Generator_RelationVarName="relationFK_ClientService_Service" msprop:Generator_UserParentTable="Service" />
-      <msdata:Relationship name="FK_DocumentByService_ClientService" msdata:parent="ClientService" msdata:child="DocumentByService" msdata:parentkey="ID" msdata:childkey="ClientServiceID" msprop:Generator_UserChildTable="DocumentByService" msprop:Generator_ChildPropName="GetDocumentByServiceRows" msprop:Generator_UserRelationName="FK_DocumentByService_ClientService" msprop:Generator_RelationVarName="relationFK_DocumentByService_ClientService" msprop:Generator_UserParentTable="ClientService" msprop:Generator_ParentPropName="ClientServiceRow" />
-      <msdata:Relationship name="FK_Product_Manufacturer" msdata:parent="Manufacturer" msdata:child="Product" msdata:parentkey="ID" msdata:childkey="ManufacturerID" msprop:Generator_UserChildTable="Product" msprop:Generator_ChildPropName="GetProductRows" msprop:Generator_UserRelationName="FK_Product_Manufacturer" msprop:Generator_RelationVarName="relationFK_Product_Manufacturer" msprop:Generator_UserParentTable="Manufacturer" msprop:Generator_ParentPropName="ManufacturerRow" />
-      <msdata:Relationship name="FK_ProductPhoto_Product" msdata:parent="Product" msdata:child="ProductPhoto" msdata:parentkey="ID" msdata:childkey="ProductID" msprop:Generator_UserChildTable="ProductPhoto" msprop:Generator_ChildPropName="GetProductPhotoRows" msprop:Generator_UserRelationName="FK_ProductPhoto_Product" msprop:Generator_RelationVarName="relationFK_ProductPhoto_Product" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRow" />
-      <msdata:Relationship name="FK_ProductSale_ClientService" msdata:parent="ClientService" msdata:child="ProductSale" msdata:parentkey="ID" msdata:childkey="ClientServiceID" msprop:Generator_UserChildTable="ProductSale" msprop:Generator_ChildPropName="GetProductSaleRows" msprop:Generator_UserRelationName="FK_ProductSale_ClientService" msprop:Generator_RelationVarName="relationFK_ProductSale_ClientService" msprop:Generator_UserParentTable="ClientService" msprop:Generator_ParentPropName="ClientServiceRow" />
-      <msdata:Relationship name="FK_ProductSale_Product" msdata:parent="Product" msdata:child="ProductSale" msdata:parentkey="ID" msdata:childkey="ProductID" msprop:Generator_UserChildTable="ProductSale" msprop:Generator_ChildPropName="GetProductSaleRows" msprop:Generator_UserRelationName="FK_ProductSale_Product" msprop:Generator_RelationVarName="relationFK_ProductSale_Product" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRow" />
-      <msdata:Relationship name="FK_ServicePhoto_Service" msdata:parent="Service" msdata:child="ServicePhoto" msdata:parentkey="ID" msdata:childkey="ServiceID" msprop:Generator_UserChildTable="ServicePhoto" msprop:Generator_ChildPropName="GetServicePhotoRows" msprop:Generator_UserRelationName="FK_ServicePhoto_Service" msprop:Generator_RelationVarName="relationFK_ServicePhoto_Service" msprop:Generator_UserParentTable="Service" msprop:Generator_ParentPropName="ServiceRow" />
-      <msdata:Relationship name="FK_TagOfClient_Client" msdata:parent="Client" msdata:child="TagOfClient" msdata:parentkey="ID" msdata:childkey="ClientID" msprop:Generator_UserChildTable="TagOfClient" msprop:Generator_ChildPropName="GetTagOfClientRows" msprop:Generator_UserRelationName="FK_TagOfClient_Client" msprop:Generator_RelationVarName="relationFK_TagOfClient_Client" msprop:Generator_UserParentTable="Client" msprop:Generator_ParentPropName="ClientRow" />
-      <msdata:Relationship name="FK_TagOfClient_Tag" msdata:parent="Tag" msdata:child="TagOfClient" msdata:parentkey="ID" msdata:childkey="TagID" msprop:Generator_UserChildTable="TagOfClient" msprop:Generator_ChildPropName="GetTagOfClientRows" msprop:Generator_UserRelationName="FK_TagOfClient_Tag" msprop:Generator_RelationVarName="relationFK_TagOfClient_Tag" msprop:Generator_UserParentTable="Tag" msprop:Generator_ParentPropName="TagRow" />
+      <msdata:Relationship name="FK_AttachedProduct_Product" msdata:parent="Product" msdata:child="AttachedProduct" msdata:parentkey="ID" msdata:childkey="MainProductID" msprop:Generator_UserChildTable="AttachedProduct" msprop:Generator_ChildPropName="GetAttachedProductRowsByFK_AttachedProduct_Product" msprop:Generator_UserRelationName="FK_AttachedProduct_Product" msprop:Generator_RelationVarName="relationFK_AttachedProduct_Product" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRowByFK_AttachedProduct_Product" />
+      <msdata:Relationship name="FK_AttachedProduct_Product1" msdata:parent="Product" msdata:child="AttachedProduct" msdata:parentkey="ID" msdata:childkey="AttachedProductID" msprop:Generator_UserChildTable="AttachedProduct" msprop:Generator_ChildPropName="GetAttachedProductRowsByFK_AttachedProduct_Product1" msprop:Generator_UserRelationName="FK_AttachedProduct_Product1" msprop:Generator_RelationVarName="relationFK_AttachedProduct_Product1" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRowByFK_AttachedProduct_Product1" />
+      <msdata:Relationship name="FK_Client_Gender" msdata:parent="Gender" msdata:child="Client" msdata:parentkey="Code" msdata:childkey="GenderCode" msprop:Generator_UserChildTable="Client" msprop:Generator_ChildPropName="GetClientRows" msprop:Generator_UserRelationName="FK_Client_Gender" msprop:Generator_RelationVarName="relationFK_Client_Gender" msprop:Generator_UserParentTable="Gender" msprop:Generator_ParentPropName="GenderRow" />
+      <msdata:Relationship name="FK_ClientService_Client" msdata:parent="Client" msdata:child="ClientService" msdata:parentkey="ID" msdata:childkey="ClientID" msprop:Generator_UserChildTable="ClientService" msprop:Generator_ChildPropName="GetClientServiceRows" msprop:Generator_UserRelationName="FK_ClientService_Client" msprop:Generator_ParentPropName="ClientRow" msprop:Generator_RelationVarName="relationFK_ClientService_Client" msprop:Generator_UserParentTable="Client" />
+      <msdata:Relationship name="FK_ClientService_Service" msdata:parent="Service" msdata:child="ClientService" msdata:parentkey="ID" msdata:childkey="ServiceID" msprop:Generator_UserChildTable="ClientService" msprop:Generator_ChildPropName="GetClientServiceRows" msprop:Generator_UserRelationName="FK_ClientService_Service" msprop:Generator_RelationVarName="relationFK_ClientService_Service" msprop:Generator_UserParentTable="Service" msprop:Generator_ParentPropName="ServiceRow" />
+      <msdata:Relationship name="FK_DocumentByService_ClientService" msdata:parent="ClientService" msdata:child="DocumentByService" msdata:parentkey="ID" msdata:childkey="ClientServiceID" msprop:Generator_UserChildTable="DocumentByService" msprop:Generator_ChildPropName="GetDocumentByServiceRows" msprop:Generator_UserRelationName="FK_DocumentByService_ClientService" msprop:Generator_ParentPropName="ClientServiceRow" msprop:Generator_RelationVarName="relationFK_DocumentByService_ClientService" msprop:Generator_UserParentTable="ClientService" />
+      <msdata:Relationship name="FK_Product_Manufacturer" msdata:parent="Manufacturer" msdata:child="Product" msdata:parentkey="ID" msdata:childkey="ManufacturerID" msprop:Generator_UserChildTable="Product" msprop:Generator_ChildPropName="GetProductRows" msprop:Generator_UserRelationName="FK_Product_Manufacturer" msprop:Generator_ParentPropName="ManufacturerRow" msprop:Generator_RelationVarName="relationFK_Product_Manufacturer" msprop:Generator_UserParentTable="Manufacturer" />
+      <msdata:Relationship name="FK_ProductPhoto_Product" msdata:parent="Product" msdata:child="ProductPhoto" msdata:parentkey="ID" msdata:childkey="ProductID" msprop:Generator_UserChildTable="ProductPhoto" msprop:Generator_ChildPropName="GetProductPhotoRows" msprop:Generator_UserRelationName="FK_ProductPhoto_Product" msprop:Generator_ParentPropName="ProductRow" msprop:Generator_RelationVarName="relationFK_ProductPhoto_Product" msprop:Generator_UserParentTable="Product" />
+      <msdata:Relationship name="FK_ProductSale_ClientService" msdata:parent="ClientService" msdata:child="ProductSale" msdata:parentkey="ID" msdata:childkey="ClientServiceID" msprop:Generator_UserChildTable="ProductSale" msprop:Generator_ChildPropName="GetProductSaleRows" msprop:Generator_UserRelationName="FK_ProductSale_ClientService" msprop:Generator_ParentPropName="ClientServiceRow" msprop:Generator_RelationVarName="relationFK_ProductSale_ClientService" msprop:Generator_UserParentTable="ClientService" />
+      <msdata:Relationship name="FK_ProductSale_Product" msdata:parent="Product" msdata:child="ProductSale" msdata:parentkey="ID" msdata:childkey="ProductID" msprop:Generator_UserChildTable="ProductSale" msprop:Generator_ChildPropName="GetProductSaleRows" msprop:Generator_UserRelationName="FK_ProductSale_Product" msprop:Generator_ParentPropName="ProductRow" msprop:Generator_RelationVarName="relationFK_ProductSale_Product" msprop:Generator_UserParentTable="Product" />
+      <msdata:Relationship name="FK_ServicePhoto_Service" msdata:parent="Service" msdata:child="ServicePhoto" msdata:parentkey="ID" msdata:childkey="ServiceID" msprop:Generator_UserChildTable="ServicePhoto" msprop:Generator_ChildPropName="GetServicePhotoRows" msprop:Generator_UserRelationName="FK_ServicePhoto_Service" msprop:Generator_ParentPropName="ServiceRow" msprop:Generator_RelationVarName="relationFK_ServicePhoto_Service" msprop:Generator_UserParentTable="Service" />
+      <msdata:Relationship name="FK_TagOfClient_Client" msdata:parent="Client" msdata:child="TagOfClient" msdata:parentkey="ID" msdata:childkey="ClientID" msprop:Generator_UserChildTable="TagOfClient" msprop:Generator_ChildPropName="GetTagOfClientRows" msprop:Generator_UserRelationName="FK_TagOfClient_Client" msprop:Generator_ParentPropName="ClientRow" msprop:Generator_RelationVarName="relationFK_TagOfClient_Client" msprop:Generator_UserParentTable="Client" />
+      <msdata:Relationship name="FK_TagOfClient_Tag" msdata:parent="Tag" msdata:child="TagOfClient" msdata:parentkey="ID" msdata:childkey="TagID" msprop:Generator_UserChildTable="TagOfClient" msprop:Generator_ChildPropName="GetTagOfClientRows" msprop:Generator_UserRelationName="FK_TagOfClient_Tag" msprop:Generator_ParentPropName="TagRow" msprop:Generator_RelationVarName="relationFK_TagOfClient_Tag" msprop:Generator_UserParentTable="Tag" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -1,9 +1,11 @@
-﻿using Dem2._2.Model;
+﻿using Dem2._2.__Dem2Skarredin2DataSetTableAdapters;
+using Dem2._2.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,14 +54,18 @@ namespace Dem2._2
         
         private void Klient_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "___Dem2Skarredin2DataSet.Количество". При необходимости она может быть перемещена или удалена.
+            this.количествоTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Количество);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "___Dem2Skarredin2DataSet.Tag". При необходимости она может быть перемещена или удалена.
+            this.tagTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Tag);
             try
             {
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "___Dem2Skarredin2DataSet.Gender". При необходимости она может быть перемещена или удалена.
                 this.genderTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Gender);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "___Dem2Skarredin2DataSet.Client". При необходимости она может быть перемещена или удалена.
                 this.clientTableAdapter.Fill(this.___Dem2Skarredin2DataSet.Client);
-                string ds = dataGridViewTextBoxColumn10.Name.ToString();
-                Column1.Image = Image.FromFile(ds.Replace(@" ", @""));
+                //string ds = dataGridViewTextBoxColumn10.Name.ToString();
+                //Column1.Image = Image.FromFile(ds.Replace(@" ", @""));
                 initialPage = 0; pageSize = 25;
 
 
@@ -78,7 +84,7 @@ namespace Dem2._2
 
                
             }
-   
+            
 
         }
 
@@ -173,6 +179,9 @@ namespace Dem2._2
         }
         int initialPage, pageSize;
         Entities db = new Entities();
+
+        
+
         private void VivodL_SelectedIndexChanged(object sender, EventArgs e)
         {
             db.Client.Local.Clear();
@@ -212,5 +221,180 @@ namespace Dem2._2
            
             
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //int pageSize1 = 10; // размер страницы
+        //int pageNumber = 0; // текущая страница
+        //int countRows = 0;
+        //int countRowsPage = 0;
+
+        //bool flag = false;
+
+        //string connectionString = @"Data Source=SBD\MSSQL;Initial Catalog=DemOrSkaredin1DataSet;Integrated Security=True";
+        //SqlDataAdapter adapter;
+        //DataSet ds;
+        //StringBuilder sb = new StringBuilder();
+
+        //private string GetSql()
+        //{
+        //    return $"SELECT  ID, FirstName, LastName, Patronymic, Birthday, RegistrationDate, Phone, Email, GenderCode, '' as Count FROM Client {sb.ToString()} ORDER BY Id OFFSET ((" + pageNumber + ") * " + pageSize1 + ") " +
+        //        "ROWS FETCH NEXT " + pageSize1 + "ROWS ONLY";
+        //}
+        //public class combo
+        //{
+        //    public string page { get; set; }
+        //    public string name { get; set; }
+        //}
+        //private void LoadCD()
+        //{
+        //    int i = 0;
+        //    for (i = 0; i < clientDataGridView.RowCount; i++)
+        //    {
+        //        int id2 = Convert.ToInt32(clientDataGridView.Rows[i].Cells[0].Value);
+        //        Количество count = Entities.GetContext().Количество.Where(p => p.ID == id2).FirstOrDefault();
+        //        clientDataGridView.Rows[i].Cells[9].Value = count.Expr1.ToString();
+        //        clientDataGridView.Rows[i].Cells[10].Value = count.Expr2.ToString();
+        //    }
+        //}
+        //private void Clear()
+        //{
+        //    pageNumber = 0;
+
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
+        //        adapter = new SqlDataAdapter(GetSql(), connection);
+
+        //        ds.Tables["Client"].Rows.Clear();
+
+        //        adapter.Fill(ds, "Client");
+        //    }
+
+        //    countRowsPage = 0;
+        //    countRows = clientDataGridView.Rows.Count;
+
+        //    numRows = GetSqlCount();
+        //    Vivod.Text = countRows + " из " + numRows;
+        //    LoadCD();
+        //}
+        //private void FormLoad()
+        //{
+        //    clientDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
+        //        adapter = new SqlDataAdapter(GetSql(), connection);
+        //        ds = new DataSet();
+        //        adapter.Fill(ds, "Client");
+        //        ds.Tables["Client"].Columns.Add("LastDate", typeof(DateTime));
+        //        clientDataGridView.DataSource = ds.Tables[0];
+        //    }
+
+
+
+        //    //// TODO: данная строка кода позволяет загрузить данные в таблицу "eyyafyadlayokyudlDataSet.Gender". При необходимости она может быть перемещена или удалена.
+        //    //this.genderTableAdapter.Fill(this.eyyafyadlayokyudlDataSet.Gender);
+        //    //// TODO: данная строка кода позволяет загрузить данные в таблицу "eyyafyadlayokyudlDataSet.Tag". При необходимости она может быть перемещена или удалена.
+        //    //this.tagTableAdapter.Fill(this.eyyafyadlayokyudlDataSet.Tag);
+        //    //// TODO: данная строка кода позволяет загрузить данные в таблицу "eyyafyadlayokyudlDataSet.TagOfClient". При необходимости она может быть перемещена или удалена.
+        //    //this.tagOfClientTableAdapter.Fill(this.eyyafyadlayokyudlDataSet.TagOfClient);
+        //    //// TODO: данная строка кода позволяет загрузить данные в таблицу "eyyafyadlayokyudlDataSet.Количество". При необходимости она может быть перемещена или удалена.
+        //    //this.количествоTableAdapter.Fill(this.eyyafyadlayokyudlDataSet.Количество);
+
+        //    var Combo = new List<combo>();
+        //    Combo.Add(new combo() { page = "10", name = "10" });
+        //    Combo.Add(new combo() { page = "50", name = "50" });
+        //    Combo.Add(new combo() { page = "200", name = "200" });
+        //    Combo.Add(new combo() { page = GetSqlCount().ToString(), name = "Все" });
+        //    VivodCombo.DataSource = Combo;
+        //    VivodCombo.DisplayMember = "name";
+        //    VivodCombo.ValueMember = "page";
+        //    VivodCombo.SelectedValue = "10";
+
+        //    countRows = clientDataGridView.Rows.Count;
+        //    numRows = GetSqlCount();
+        //    Vivod.Text = countRows + " из " + numRows;
+
+        //    foreach (DataGridViewColumn item in clientDataGridView.Columns)
+        //    {
+        //        item.SortMode = DataGridViewColumnSortMode.NotSortable;
+        //    }
+
+        //    tagBindingSource.Filter = $"ClientID=-5";
+        //    flag = true;
+
+        //    //sb = new StringBuilder("");
+        //    //textBox1.Text = "";
+        //    //textBox2.Text = "";
+        //    //textBox3.Text = "";
+        //    //textBox4.Text = "";
+        //    //textBox5.Text = "";
+        //    //comboBox2.Text = "";
+        //    //radioButton1.Checked = false;
+        //    //radioButton2.Checked = false;
+        //    //radioButton3.Checked = false;
+        //    //checkBox1.Checked = false;
+
+        //    LoadCD();
+        //}
+        //private int GetSqlCount()
+        //{
+        //    int numRows;
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
+        //        string query = $"SELECT count(*) FROM Client {sb.ToString()}";
+        //        SqlCommand command = new SqlCommand(query, connection);
+        //        connection.Open();
+        //        numRows = Convert.ToInt32(command.ExecuteScalar());
+        //    }
+        //    return numRows;
+        //}
+
+        //int numRows = 0;
+
+
+
+        //private void VivodCombo_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (VivodCombo.SelectedValue.ToString() != "" && flag)
+        //    {
+        //        pageSize1 = Convert.ToInt32(VivodCombo.SelectedValue.ToString());
+        //    }
+
+        //    pageNumber = 0;
+
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
+        //        adapter = new SqlDataAdapter(GetSql(), connection);
+
+        //        ds.Tables["Client"].Rows.Clear();
+
+        //        adapter.Fill(ds, "Client");
+        //    }
+        //    countRowsPage = 0;
+        //    countRows = clientDataGridView.Rows.Count;
+
+        //    numRows = GetSqlCount();
+        //    Vivod.Text = countRows + " из " + numRows;
+
+        //    Clear();
+        //    LoadCD();
+        //}
     }
 }
